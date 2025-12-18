@@ -1,0 +1,33 @@
+public class CeilingOfANumber {
+    public static void main(String[] args) {
+        int[] nums = {1,2,4,5,6,54,75,77,89};
+        int target = 10;
+        int ceiling = findCeiling(nums,target);
+        if(ceiling< nums.length) {
+            // the smallest value greater than target is ceiling value
+            System.out.println("Ceiling found at index " + ceiling + " and The value is " + nums[ceiling]);
+        }
+        else System.out.println("Ceiling not found");
+
+    }
+
+    public static int findCeiling(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length-1;
+
+        while(left <= right){
+            int mid = (left+right)/2;
+
+            if(nums[mid]==target){
+                return mid;
+            }
+            else if(nums[mid]<target){
+                left = mid+1;
+            }
+            else{
+                right = mid -1;
+            }
+        }
+        return left;
+    }
+}
