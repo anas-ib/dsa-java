@@ -13,8 +13,10 @@
 public class CeilingOfANumber {
     public static void main(String[] args) {
         int[] nums = {1,2,4,5,6,54,75,77,89};
-        int target = 10;
+        int target = 90;
         int ceiling = findCeiling(nums,target);
+        //if loop is used to make it work for all conditions
+        // 1. target is in array, 2. target between elements, 3. target greater than max element.
         if(ceiling< nums.length) {
             // the smallest value greater than target is ceiling value
             System.out.println("Ceiling found at index " + ceiling + " and The value is " + nums[ceiling]);
