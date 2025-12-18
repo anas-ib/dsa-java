@@ -1,3 +1,15 @@
+// Ceiling of a number = the target itself (if present)
+// or the smallest element greater than the target.
+//
+// Case 1: If target exists in the array,
+// binary search finds it and we return that index.
+//
+// Case 2: If target does not exist,
+// binary search ends when start > end.
+// At that point, `start` points to the smallest element
+// greater than the target — which is the ceiling.
+
+
 public class CeilingOfANumber {
     public static void main(String[] args) {
         int[] nums = {1,2,4,5,6,54,75,77,89};
@@ -31,3 +43,5 @@ public class CeilingOfANumber {
         return left;
     }
 }
+
+
