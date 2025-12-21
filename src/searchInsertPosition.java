@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class searcInsertPosition {
+public class searchInsertPosition {
 
     public static void main(String []args){
         int nums[] = {5,7,7,8,8,10};
